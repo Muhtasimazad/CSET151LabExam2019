@@ -100,25 +100,10 @@ public class StudentList
 		{
 			System.out.println("Loading data ...");			
 			
-				char a[] = reader.toCharArray();			
-				boolean in_word = false;
-				int count=0;
-				for(char c:a) 
-				{
-					if(c ==' ') 
-					{
-						if (!in_word) 
-						{	
-							count++; 
-							in_word =true;	
-						}
-						else 
-						{ 
-							in_word=false;
-						}			
-					}
-				}
-				System.out.println(count +" word(s) found " + a.length);
+							
+				String words[] = contents.split(",");
+			char a[] = contents.toCharArray();
+			System.out.println(words.length +" word(s) found Character" + a.length);
 			
 			
 			System.out.println("Data Loaded.");				
