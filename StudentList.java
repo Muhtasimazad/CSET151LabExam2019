@@ -1,9 +1,12 @@
+package CSET151LabExam2019;
 import java.io.*;
 import java.text.*;
 import java.util.*;
-public class StudentList 
-{
+import static CSET151LabExam2019.Constants.*;
 
+public class StudentList
+{
+	
 	public  static String LoadData(){
 		System.out.println("Loading data ...");
 		String contents = null;
@@ -39,6 +42,7 @@ public class StudentList
 
 	public static void main(String[] args) 
 	{
+		//Constants constants = new Constants();
 //		Check arguments
 		if(args == null || args.length!=1)
 		{
@@ -46,8 +50,7 @@ public class StudentList
 			return;
 		}
 		String reader = LoadData();
-		System.out.println(reader);	
-		if(args[0].equals("a")) 
+		if(args[0].equals(ShowAll)) 
 		{
 			 
 				
@@ -60,7 +63,7 @@ public class StudentList
 			
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].equals("r"))
+		else if(args[0].equals(ShowRandom))
 		{
 			
 				String words[] = reader.split(",");	
@@ -71,11 +74,11 @@ public class StudentList
 			
 			System.out.println("Data Loaded.");			
 		}
-		else if(args[0].contains("+"))
+		else if(args[0].contains(AddEntry))
 		{
 			WirteData(args);
 		}
-		else if(args[0].contains("?")) 
+		else if(args[0].contains(FindEntry)) 
 		{
 			System.out.println("Loading data ...");			
 			
@@ -94,7 +97,7 @@ public class StudentList
 			
 			System.out.println("Data Loaded.");				
 		}
-		else if(args[0].contains("c")) 
+		else if(args[0].contains(ShowCount)) 
 		{
 			System.out.println("Loading data ...");			
 			
