@@ -6,6 +6,12 @@ public class StudentList
 	public static void main(String[] args) 
 	{
 //		Check arguments
+		if(args == null || args.length!=1)
+		{
+			System.out.println("Please enter a|r| c | +WORD | ?WORD");	
+			return;
+		}
+		
 		if(args[0].equals("a")) 
 		{
 			System.out.println("Loading data ...");			
@@ -125,5 +131,6 @@ public class StudentList
 			} 
 			System.out.println("Data Loaded.");				
 		}
+		
 	}
 }
