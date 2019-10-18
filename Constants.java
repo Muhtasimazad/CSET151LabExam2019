@@ -108,6 +108,10 @@ public class StudentList
 			
 			System.out.println("Data Loaded.");				
 		}
+		else
+		{
+			System.out.println("enter right arguments");
+		}
 		
 	}
 }
